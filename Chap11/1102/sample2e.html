@@ -12,20 +12,45 @@
 		}
 	</style>
 	<script>
+		// Ajaxの利用
 		var req;
 		function getFile(path) {
-			req = new XMLHttpRequest();
-			req.onreadystatechange = showData;
-			req.open("GET", path, true);
-			req.send(null);
+			req = new XMLHttpRequest(); // XMLHttpRequestオブジェクトの生成
+			req.onreadystatechange = showData; // コールバック関数の設定
+			req.open("GET", path, true); //HTTPリクエストの内容を指定 第3引数がtrueで非同期通信 falseで同期通信
+			req.send(null); //sendメソッドでサーバにHTTPリクエストが送信される。GETの場合はnullを指定
 		}
 		
 		function showData() {
 			if (req.readyState == 4 && req.status == 200) {
 				document.getElementById("myArea").innerHTML =
-				req.responseText;
+				req.responseText; //responseTextはサーバから取得したテキストが格納されているプロパティ
 			}
-		}		
+			/* readyStateの値
+				0:未初期化状態
+				1:リクエスト準備中
+				2:リクエスト完了
+				3:データ受信中
+				4:データ取得完了
+			*/
+			/* statusの値
+				200:リクエストが正しく処理された
+				400:リクエストが不正なものであった
+				403:アクセスが拒否された
+				404:ファイルが見つからない
+				405:指定したメソッドがサポートされていない
+				415:指定したメディアタイプがサポートされていない
+				500:サーバの内部エラーが発生した
+				505:リクエストしたHTTPプロトコル・バージョンはサポートされていない
+			*/
+		}
+		/*
+			XmlHttpRequestオブジェクトを利用してサーバと非同期通信を行う
+			非同期通信ではリクエストを送ってからデータの取得が完了するまでの間も別の処理が可能
+			そのためには、いつデータの取得が完了したかを知る必要がある そのためにコールバック関数を使用する
+			コールバック関数はonreadystatechangeプロパティで設定する
+			設定するとデータの取得が完了した場合など、通信の状況が変化した時にコールバック関数が呼び出される
+		*/
 	</script>
 </head>
 
