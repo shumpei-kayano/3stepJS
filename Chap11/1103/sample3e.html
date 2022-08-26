@@ -4,8 +4,10 @@
 <head>
 	<meta charset="utf-8">
 	<title>jQueryを試す</title>
+	<!-- 外部ファイルの読み込み -->
 	<script src="./jquery-3.2.1.min.js"></script>
 	<script>
+		// jQueryの利用
 		$(function(){
 			$("li").css("backgroundColor", "yellow");
 			$("#title").css({color: "red", fontSize: "400%"});
@@ -13,6 +15,11 @@
 				$("#myImg").attr("src", "images/photo1.jpg");
 			})			
 		})
+		/* jQueryの記述方法
+			$(function() {
+				$("セレクタ").メソッド
+			})
+		*/
 	</script>
 </head>
 
