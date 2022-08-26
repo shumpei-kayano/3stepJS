@@ -9,6 +9,12 @@
 		}
 	</style>
 	<script>
+		// imageオブジェクト
+		/*
+			imageオブジェクトはdocumentオブジェクトのimages配列としてアクセスできる
+			最初のイメージはdocument.images[0]
+			ファイルパスはsrcプロパティに格納される
+		*/
 		var num = 0; 
 			function changeImg() {
 			document.images[0].src = "images/pic" + num + ".jpg";
@@ -23,5 +29,6 @@
 		 height="207" alt="イメージのテスト" 
 		 onclick="changeImg()"
 		 onmouseout="this.src='images/off.jpg'">
+		 <!-- 画像から離れてもoff.jpg -->
 </body>
 </html>
