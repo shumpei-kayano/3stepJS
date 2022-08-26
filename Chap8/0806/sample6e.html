@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>イメージの操作</title>
+	<style type="text/css">
+		body {
+			text-align: center;
+		}
+	</style>
+	<script>
+		var num = 0; 
+			function changeImg() {
+			document.images[0].src = "images/pic" + num + ".jpg";
+			num++;
+			if (num == 3) num = 0;
+		}
+	</script>
+</head>
+
+<body>
+	<img src="images/off.jpg" id="myImg" width="250"
+		 height="207" alt="イメージのテスト" 
+		 onclick="changeImg()"
+		 onmouseout="this.src='images/off.jpg'">
+</body>
+</html>
