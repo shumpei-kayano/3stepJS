@@ -7,6 +7,7 @@
 
 <body>
 	<script>
+		// 連想配列
 		var colors = new Object();
 		colors["white"] = "白色";
 		colors["red"] = "赤色";
@@ -16,6 +17,13 @@
 		for (var eigo in colors) {
 			document.write("<h2>", eigo + " " + colors[eigo], "</h2>");
 		}
+		/*
+			連想配列ではArrayオブジェクトに用意されているメソッドは使用できない
+			colors["yellow"] = "黄色"	連想配列形式で要素にアクセス
+			colors.yellow = "黄色"		プロパティ形式で要素にアクセス
+			for (let eigo in colors) 拡張for文 キーがeigoに順番に取り出される
+			キー:eigo 値:colors[eigo]
+		*/
 	</script>
 </body>
 </html>
