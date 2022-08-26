@@ -7,6 +7,7 @@
 
 <body>
 	<script>
+		// Stringオブジェクト
 		var str1 = new String("Stringオブジェクト");
 		document.write("<h1>", str1, "</h1>");
 		document.write("<h2>長さ:", str1.length, "</h2>");
@@ -15,6 +16,16 @@
 		for (var i = 0; i <= (str2.length - 1); i++) {
 			document.write("<h2>", str2.charAt(i), "</h2>");
 		}
+		/*
+			length	文字列の長さ
+			charAt	指定した位置の文字を取り出す
+			charCodeAt 指定した位置の文字の文字コードを戻す
+			indexOf	文字列の位置を調べる
+			split	文字列を配列に変換する
+			substring 指定した範囲の文字列の途中を取り出す
+			toLowerCase 半角英字を小文字に変換する
+			toUpperCase 半角英字を大文字に変換する
+		*/
 	</script>
 </body>
 </html>
