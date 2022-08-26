@@ -4,6 +4,15 @@
 	<meta charset="utf-8">
 	<title>イベントハンドラのテスト</title>
 	<script>
+		// イベントハンドラ
+		/*
+			----HTMLタグ内でイベントハンドラを設定する----
+			<HTMLタグ イベントハンドラ = "実行するステートメント">
+			<input type="button" onclick="func1()">
+			----イベントハンドラをプロパティとして設定する----
+			オブジェクト名.イベントハンドラ = 呼び出す関数名;
+			window.onload = init;
+		*/
 		function func1(str) {
 			alert(str + "がクリックされました");
 		}
@@ -12,6 +21,23 @@
 			alert("ドキュメントがロードされました");
 		}
 		window.onload = init;
+		/* 主なイベントハンドラ
+			onblur		オブジェクトがフォーカスを失ったとき
+			onfocus		オブジェクトがフォーカスを得たとき
+			onclick		オブジェクトがクリックされたとき
+			ondbclick	マウスボタンをダブルクリックしたとき
+			onmousedown	マウスボタンを押したとき
+			onmouseup	マウスボタンを離したとき
+			onmousemove	マウスボタンを動かしたとき
+			onchange	テキストフィールドなどのテキストの内容が変更されたとき
+			onsubmit	フォームが送信されたとき
+			onload		HTMLドキュメントが読み込まれたとき
+			onunload	HTMLドキュメントが切り替わったとき
+			onabort		イメージのロードが途中で中止されたとき
+			onreset		フォームをリセットしたとき
+			onerror		何らかのエラーが起こったとき
+			onselect	テキストが選択されたとき
+		*/
 	</script>
 </head>
 
