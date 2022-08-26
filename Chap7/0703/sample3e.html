@@ -12,9 +12,22 @@
 
 <body>
 	<script>
+		// Arrayオブジェクト
 		var ages = new Array(4, 6, 10, 24, 1, 11, 40);
 		ages = ages.sort(compare);
 		document.write(ages.join(" > "));
+		/* 主なメソッド
+			sort	要素を並び替える
+			concat	配列に要素を追加して新たな配列を生成する
+			join	配列の要素を引数で指定した文字列でつなげた文字列を戻す
+			pop		配列の最後の要素を取り出す（削除）
+			push	配列の最後に要素を追加する
+			reverse	配列の要素を逆順にする
+			shift	配列の要素を取り出す
+			slice	配列の要素の一部を取り出して新たな配列を生成する str.slice( 開始位置, 終了位置(省略可能) );
+			splice	配列の要素を別の要素に置き換える 配列名.splice(開始インデックス, 削除する要素数)
+			unshift	配列の最初に要素を追加する
+		*/
 	</script>
 </body>
 </html>
