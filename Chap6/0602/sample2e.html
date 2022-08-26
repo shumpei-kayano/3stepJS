@@ -7,6 +7,7 @@
 
 <body>
 	<script>
+		// Dateオブジェクト
 		var now, date;
 		now = new Date();
 		date = now.getFullYear() + "年" +
@@ -19,6 +20,15 @@
 		diff = gantan.getTime() - now.getTime();
 		days = Math.ceil(diff / (24 * 60 * 60 * 1000));
 		document.write("<h1>ことしの残り日数：", days, "</h1>");
+		/* 主なメソッド
+			getFullYear	年を4桁の数値で戻す
+			getMonth	月を戻す。0が1月
+			getDay		曜日を戻す。0が日曜日
+			getDate		日を戻す
+			getHours	時間を戻す
+			getMinutes	分を戻す
+			getSeconds	秒を戻す
+		*/
 	</script>
 </body>
 </html>
