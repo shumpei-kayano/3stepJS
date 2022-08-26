@@ -4,9 +4,11 @@
 	<meta charset="utf-8">
 	<title>フォームの利用</title>
 	<script>
+		// formオブジェクト
 		function stdWeight(myForm) {
 			var height, weight;
-			height = Number(myForm.height.value);
+			height = Number(myForm.height.value); // formの階層から記述できる
+			// formのsex[0]は男のラジオボタン
 			if (myForm.sex[0].checked) {
 				weight = (height - 80) * 0.7;
 			} else {
@@ -14,6 +16,16 @@
 			}			
 			myForm.weight.value = weight;
 		}
+		/* formオブジェクトの下位層にbuttonオブジェクトやradioオブジェクトがある
+			----フォームの部品のアクセス----
+			各要素はHTMLのname属性で指定した名前でアクセスできる
+			document.myForm.height.value
+					 formオブジェクト.textオブジェクト.valueプロパティ
+			----自分自身を示すthisプロパティ----
+			ボタンのイベントハンドラで記述した場合、thisはボタン自身を表す
+			そのボタンが属するformオブジェクトはthis.formで参照できる
+			
+		*/
 	</script>
 </head>
 
@@ -22,6 +34,7 @@
 		男性：<input type="radio" name="sex" checked>
 		女性：<input type="radio" name="sex" ><br>
 		身長：<input type="text" name="height">cm<br>
+		<!-- this.form formオブジェクトを引数で渡している -->
 		<input type="button" value="計算" 
 			name="calc" onclick="stdWeight(this.form)"><br>
 		標準体重：<input type="text" name="weight">kg
