@@ -4,8 +4,9 @@
 	<meta charset="utf-8">
 	<title>変数のスコープ</title>
 	<script>
+		// 変数のスコープ
 		function testFunc() {
-			var num;
+			// ブロック内はローカル変数
 			num = 5;
 		}
 	</script>
@@ -14,7 +15,8 @@
 <body>
 	<p style="font-size:200%">
 		<script>
-			var num = 3;
+			// ブロックの外で宣言するとグローバル変数 スコープはプログラム全体
+			let num = 3;
 			testFunc();
 			document.write(num, "<br>");
 		</script>
