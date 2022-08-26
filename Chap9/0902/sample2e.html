@@ -9,6 +9,7 @@
 		}
 	</style>
 	<script>
+		// ユーザ定義オブジェクト
 		function Person(name, height) {
 			this.name = name;
 			this.height = height;
@@ -19,6 +20,7 @@
 			weight = (this.height - 100) * 0.9;
 			return weight;
 		}
+		// メソッドをオブジェクトに追加
 		Person.prototype.stdWeight = calcWeight;
 	</script>
 </head>
